@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Card Game</string>
     <string name="title">Main Menu</string>
+    <string name="high_hand">High Hand</string>
 </resources>

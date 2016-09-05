@@ -17,6 +17,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".HighHand"
+            android:label="@string/high_hand"
+            android:parentActivityName=".MainMenu">
+        </activity>
+
     </application>
 
 </manifest>
