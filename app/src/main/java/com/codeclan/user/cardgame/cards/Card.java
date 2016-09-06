@@ -26,4 +26,8 @@ public class Card {
         return rank.getValue();
     }
 
+    public String print() {
+        return (getRank().toString().toLowerCase() + " of " + getSuit().toString().toLowerCase());
+    }
+
 }

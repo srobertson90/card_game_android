@@ -32,5 +32,8 @@ public class CardTest {
     public void canGetValue(){
         assertEquals(2, card.getValue());
     }
+
+    @Test
+    public void canPrintCard() {assertEquals("two of hearts", card.print());}
 }
 
