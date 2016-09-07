@@ -76,7 +76,7 @@ public class Game {
         shuffleDeck();
     }
 
-    public void initPlayers(User player1, Dealer player2){
+    public void initPlayers(Player player1, Player player2){
         clearPlayers();
         addToPlayers(player1);
         addToPlayers(player2);
@@ -87,6 +87,11 @@ public class Game {
             player.handClear();
         }
         initDeck();
+    }
+
+    public void run(){
+        initRound();
+        dealOut();
     }
 
 }

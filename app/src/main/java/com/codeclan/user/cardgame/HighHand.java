@@ -22,6 +22,16 @@ public class HighHand extends AppCompatActivity {
     TextView mPlayer2Hand;
     TextView mPlayer2Score;
     TextView mWinner;
+    Game mGame;
+    User mPlayer1;
+    Dealer mPlayer2;
+
+    public void showResults(){
+        mPlayer1Hand.setText("player 1: " + mPlayer1.handPrint());
+        mPlayer1Score.setText(mPlayer1.handPrintScore());
+        mPlayer2Hand.setText("player 2: " + mPlayer2.handPrint());
+        mPlayer2Score.setText(mPlayer2.handPrintScore());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +46,13 @@ public class HighHand extends AppCompatActivity {
         mPlayer2Score=(TextView)findViewById(R.id.player_2_score);
         mWinner=(TextView)findViewById(R.id.winner);
 
+        mGame = new Game();
+        mPlayer1 = new User();
+        mPlayer2 = new Dealer();
+        mGame.initPlayers(mPlayer1, mPlayer2);
+        mGame.run();
+        showResults();
+
         mMenuButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -47,16 +64,8 @@ public class HighHand extends AppCompatActivity {
         mPlayButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Game game = new Game();
-                User player1 = new User();
-                Dealer player2 = new Dealer();
-                game.initPlayers(player1, player2);
-                game.initRound();
-                game.dealOut();
-                mPlayer1Hand.setText(player1.handPrint());
-                mPlayer1Score.setText(player1.handPrintScore());
-                mPlayer2Hand.setText(player2.handPrint());
-                mPlayer2Score.setText(player2.handPrintScore());
+                mGame.run();
+                showResults();
             }
         });
     }
