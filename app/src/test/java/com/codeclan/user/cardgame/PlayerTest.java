@@ -28,7 +28,7 @@ public class PlayerTest {
     }
 
     @Test
-    public void canAddCardtoHand() {
+    public void canAddCardToHand() {
         user.handAdd(card);
         assertEquals(1, user.handCount());
     }
@@ -55,7 +55,7 @@ public class PlayerTest {
     }
 
     @Test
-    public void canRemoveCardfromHand(){
+    public void canRemoveCardFromHand(){
         user.handAdd(card);
         assertEquals(1, user.handCount());
         user.handRemove(card);
@@ -63,7 +63,7 @@ public class PlayerTest {
     }
 
     @Test
-    public void canRemoveCardfromHandBAtZero(){
+    public void canRemoveCardFromHandBAtZero(){
         user.handAdd(card);
         user.handRemoveAtZero();
         assertEquals(0, user.handCount());
