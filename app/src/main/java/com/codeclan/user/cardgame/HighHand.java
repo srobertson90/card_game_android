@@ -31,7 +31,13 @@ public class HighHand extends AppCompatActivity {
         mPlayer1Score.setText(mPlayer1.handPrintScore());
         mPlayer2Hand.setText("player 2: " + mPlayer2.handPrint());
         mPlayer2Score.setText(mPlayer2.handPrintScore());
-        if (mPlayer1.handValue() > mPlayer2.handValue()){
+        if (mPlayer1.handValue() > 21) {
+            mWinner.setText("Player 1 bust, Player 2 wins!");
+        }
+        else if (mPlayer2.handValue() > 21) {
+            mWinner.setText("Player 2 bust, Player 1 wins!");
+        }
+        else if (mPlayer1.handValue() > mPlayer2.handValue()){
             mWinner.setText("Player 1 wins!");
         }
         else if (mPlayer1.handValue() < mPlayer2.handValue()){
