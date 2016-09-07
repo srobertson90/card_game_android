@@ -40,6 +40,8 @@ public abstract class Player {
         for (Card card : hand){
             statement = statement + card.print() + ", ";
         }
+        Integer score = handValue();
+        statement = statement + "totals " + score.toString();
         return statement;
     }
 
