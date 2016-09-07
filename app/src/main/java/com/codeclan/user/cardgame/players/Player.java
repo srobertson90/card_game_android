@@ -35,6 +35,14 @@ public abstract class Player {
         return total;
     }
 
+    public String handPrint(){
+        String statement = "";
+        for (Card card : hand){
+            statement = statement + card.print() + ", ";
+        }
+        return statement;
+    }
+
     public Card handRemove(Card card) {
         if (hand.remove(card)) {
             return card;
