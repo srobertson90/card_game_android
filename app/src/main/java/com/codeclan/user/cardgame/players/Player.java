@@ -46,7 +46,7 @@ public abstract class Player {
     public String handPrintScore(){
         String statement;
         Integer score = handValue();
-        statement = "totals " + score.toString();
+        statement = "score: " + score.toString();
         return statement;
     }
 

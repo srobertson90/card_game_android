@@ -2,18 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/background">
 
-    <TextView
-        android:text="@string/high_hand"
-        android:textSize="50dp"
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:src="@drawable/high_hand"/>
 
     <TextView
         android:id="@+id/player_1_hand"
         android:textSize="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -21,6 +22,7 @@
         android:id="@+id/player_1_score"
         android:textSize="15dp"
         android:layout_marginTop="15dp"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -28,6 +30,7 @@
         android:id="@+id/player_2_hand"
         android:textSize="15dp"
         android:layout_marginTop="15dp"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
@@ -35,13 +38,15 @@
         android:id="@+id/player_2_score"
         android:textSize="15dp"
         android:layout_marginTop="15dp"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/winner"
-        android:textSize="25dp"
-        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
