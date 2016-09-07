@@ -7,21 +7,20 @@
     <TextView
         android:text="@string/high_hand"
         android:textSize="50dp"
-        android:layout_marginTop="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/player_1_score"
-        android:textSize="25dp"
-        android:layout_marginTop="25dp"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/player_2_score"
-        android:textSize="25dp"
-        android:layout_marginTop="25dp"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
