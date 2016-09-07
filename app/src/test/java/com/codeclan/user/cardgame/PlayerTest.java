@@ -47,6 +47,13 @@ public class PlayerTest {
     }
 
     @Test
+    public void canPrintHand(){
+        user.handAdd(card);
+        user.handAdd(card2);
+        assertEquals("three of diamonds, four of spades, ", user.handPrint());
+    }
+
+    @Test
     public void clearHand() {
         user.handAdd(card);
         assertEquals(1, user.handCount());
